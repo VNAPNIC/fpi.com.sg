@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="abc_action_bar_height">64dp</dimen>
+    <dimen name="back_icon_height">46dp</dimen>
+    <dimen name="menu_icon_height">42dp</dimen>
+    <dimen name="content1_height">244.0dip</dimen>
 
     <dimen name="spacing_0_4dp">7.5dip</dimen>
     <dimen name="spacing_1_6dp">11.25dip</dimen>

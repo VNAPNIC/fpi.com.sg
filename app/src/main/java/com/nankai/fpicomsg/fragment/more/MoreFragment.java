@@ -1,11 +1,9 @@
-package com.nankai.fpicomsg.menu;
+package com.nankai.fpicomsg.fragment.more;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.nankai.fpicomsg.BaseFragment;
 import com.nankai.fpicomsg.R;
@@ -13,10 +11,10 @@ import com.nankai.fpicomsg.R;
 /**
  * Created by namIT on 9/9/2016.
  */
-public class GalleryFragment extends BaseFragment {
+public class MoreFragment extends BaseFragment {
 
-    public static GalleryFragment newInstantiate() {
-        GalleryFragment fragment = new GalleryFragment();
+    public static MoreFragment newInstantiate() {
+        MoreFragment fragment = new MoreFragment();
         return fragment;
     }
 
@@ -27,7 +25,7 @@ public class GalleryFragment extends BaseFragment {
 
     @Override
     protected int setupView() {
-        return R.layout.fragment_gallery;
+        return R.layout.fragment_more;
     }
 
     @Override

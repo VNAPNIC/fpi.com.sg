@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:scrollbarThumbVertical="@android:color/transparent">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,155 +11,206 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/slider"
+            android:layout_marginLeft="@dimen/spacing_1_8dp"
+            android:layout_marginRight="@dimen/spacing_1_8dp"
+            android:id="@+id/slider_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></RelativeLayout>
+            android:layout_height="wrap_content">
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:padding="@dimen/spacing_1_8dp"
-            android:text="@string/home_title"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_4_medium_16sp"
-            android:textStyle="bold" />
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/content1_height"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                custom:auto_cycle="true"
+                custom:indicator_visibility="visible"
+                custom:pager_animation="Accordion"
+                custom:pager_animation_span="1100" />
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_tile_2"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp"
-            android:textStyle="bold" />
+            <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+                <!--android:id="@+id/custom_indicator"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:gravity="center"-->
+                <!--custom:selected_color="#0095BF"-->
+                <!--custom:selected_drawable="@drawable/bird"-->
+                <!--custom:selected_height="6dp"-->
+                <!--custom:selected_padding_left="5dp"-->
+                <!--custom:selected_padding_right="5dp"-->
+                <!--custom:selected_width="6dp"-->
+                <!--custom:shape="oval"-->
+                <!--custom:unselected_color="#55333333"-->
+                <!--custom:unselected_height="6dp"-->
+                <!--custom:unselected_padding_left="5dp"-->
+                <!--custom:unselected_padding_right="5dp"-->
+                <!--custom:unselected_width="6dp" />-->
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_content"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+                <!--android:id="@+id/custom_indicator2"-->
+                <!--style="@style/AndroidImageSlider_Corner_Oval_Orange"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginBottom="20dp" />-->
+        </RelativeLayout>
 
-        <com.nankai.fpicomsg.customview.FontTextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:background="@color/colorPrimary"
-            android:padding="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_4_medium_16sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp_1"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/spacing_1_8dp"
+                android:text="@string/home_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_4_medium_16sp"
+                android:textStyle="bold" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_2_16dp"
-            android:layout_marginRight="@dimen/spacing_2_16dp"
-            android:indeterminateBehavior="cycle"
-            android:indeterminateDuration="1"
-            android:indeterminateOnly="false"
-            android:indeterminateTintMode="screen"
-            android:progress="90"
-            android:progressDrawable="@drawable/rounded_shape" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_tile_2"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp"
+                android:textStyle="bold" />
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp_2"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_content"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_2_16dp"
-            android:layout_marginRight="@dimen/spacing_2_16dp"
-            android:indeterminateBehavior="cycle"
-            android:indeterminateOnly="false"
-            android:progress="85"
-            android:progressDrawable="@drawable/rounded_shape" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_4_medium_16sp"
+                android:textStyle="bold" />
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp_3"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp_1"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_2_16dp"
-            android:layout_marginRight="@dimen/spacing_2_16dp"
-            android:indeterminateBehavior="cycle"
-            android:indeterminateOnly="false"
-            android:progress="80"
-            android:progressDrawable="@drawable/rounded_shape" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2_16dp"
+                android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateDuration="1"
+                android:indeterminateOnly="false"
+                android:indeterminateTintMode="screen"
+                android:progress="90"
+                android:progressDrawable="@drawable/rounded_shape" />
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp_4"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp_2"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_2_16dp"
-            android:layout_marginRight="@dimen/spacing_2_16dp"
-            android:indeterminateBehavior="cycle"
-            android:indeterminateOnly="false"
-            android:progress="80"
-            android:progressDrawable="@drawable/rounded_shape" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2_16dp"
+                android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateOnly="false"
+                android:progress="85"
+                android:progressDrawable="@drawable/rounded_shape" />
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp_5"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp_3"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_2_16dp"
-            android:layout_marginRight="@dimen/spacing_2_16dp"
-            android:progress="50"
-            android:progressDrawable="@drawable/rounded_shape" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2_16dp"
+                android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateOnly="false"
+                android:progress="80"
+                android:progressDrawable="@drawable/rounded_shape" />
 
-        <com.nankai.fpicomsg.customview.FontTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_1_8dp"
-            android:text="@string/home_exp_6"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_2_12sp" />
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp_4"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_2_16dp"
-            android:layout_marginBottom="@dimen/spacing_2_16dp"
-            android:layout_marginRight="@dimen/spacing_2_16dp"
-            android:indeterminateBehavior="cycle"
-            android:indeterminateOnly="false"
-            android:progress="70"
-            android:progressDrawable="@drawable/rounded_shape" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2_16dp"
+                android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateOnly="false"
+                android:progress="80"
+                android:progressDrawable="@drawable/rounded_shape" />
+
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp_5"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2_16dp"
+                android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:progress="50"
+                android:progressDrawable="@drawable/rounded_shape" />
+
+            <com.nankai.fpicomsg.customview.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1_8dp"
+                android:text="@string/home_exp_6"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_2_12sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2_16dp"
+                android:layout_marginBottom="@dimen/spacing_2_16dp"
+                android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateOnly="false"
+                android:progress="70"
+                android:progressDrawable="@drawable/rounded_shape" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -6,6 +6,7 @@
     android:layout_marginBottom="@dimen/spacing_1_8dp"
     android:background="@color/white"
     android:orientation="vertical"
+    android:id="@+id/service_item_view"
     android:padding="@dimen/spacing_1_8dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="8dp">
@@ -16,6 +17,8 @@
 
         <ImageView
             android:id="@+id/banner_service"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="content1_height">293.0dip</dimen>
+
     <dimen name="spacing_0_4dp">9.0dip</dimen>
     <dimen name="spacing_1_6dp">13.5dip</dimen>
     <dimen name="spacing_1_8dp">18.0dip</dimen>

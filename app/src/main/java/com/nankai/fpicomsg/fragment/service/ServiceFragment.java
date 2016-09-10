@@ -1,8 +1,11 @@
-package com.nankai.fpicomsg.menu;
+package com.nankai.fpicomsg.fragment.service;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -17,6 +20,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.nankai.fpicomsg.BaseFragment;
+import com.nankai.fpicomsg.MainActivity;
 import com.nankai.fpicomsg.R;
 import com.nankai.fpicomsg.customview.FontTextView;
 import com.nankai.fpicomsg.model.ServiceModel;
@@ -27,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by namIT on 9/9/2016.
+ * Created by Nankai on 9/9/2016.
  */
 public class ServiceFragment extends BaseFragment {
     private RecyclerView recyclerView;
@@ -112,9 +116,11 @@ public class ServiceFragment extends BaseFragment {
         public ImageView banner;
         public FontTextView title;
         public FontTextView content;
+        public CardView viewRoot;
 
         public ServiceViewHolder(View itemView) {
             super(itemView);
+            viewRoot = (CardView) itemView.findViewById(R.id.service_item_view);
             this.banner = (ImageView) itemView.findViewById(R.id.banner_service);
             this.title = (FontTextView) itemView.findViewById(R.id.title_service);
             this.content = (FontTextView) itemView.findViewById(R.id.content_service);
@@ -123,8 +129,10 @@ public class ServiceFragment extends BaseFragment {
 
     private class ServiceAdapter extends RecyclerView.Adapter<ServiceViewHolder> {
         private List<ServiceModel> serviceModelList;
+        private Context context;
 
         public ServiceAdapter(Context context) {
+            this.context = context;
             serviceModelList = new ArrayList<>();
         }
 
@@ -139,11 +147,36 @@ public class ServiceFragment extends BaseFragment {
         public void onBindViewHolder(ServiceViewHolder holder, int position) {
             if (null != serviceModelList && serviceModelList.size() > 0) {
                 ServiceModel model = serviceModelList.get(position);
-//                holder.banner.setBackgroundResource(model.image);
+                if (model.image.isEmpty()) {
+                    holder.banner.setVisibility(View.GONE);
+                } else {
+                    holder.banner.setVisibility(View.VISIBLE);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        holder.banner.setImageDrawable(load(model.image));
+                    } else {
+                        holder.banner.setImageDrawable(load(model.image));
+                    }
+                }
                 holder.title.setText(Html.fromHtml(model.name));
                 holder.content.setText(Html.fromHtml(model.text));
+                holder.viewRoot.setOnClickListener(new onClick(model.id));
             } else {
                 //TODO
+            }
+        }
+
+        private Drawable load(String img) {
+            try {
+                InputStream ims = context.getAssets().open("images/" + img);
+                Drawable d = Drawable.createFromStream(ims, null);
+                return d;
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    return context.getDrawable(R.mipmap.ic_launcher);
+                } else {
+                    return context.getResources().getDrawable(R.mipmap.ic_launcher);
+                }
             }
         }
 
@@ -161,6 +194,19 @@ public class ServiceFragment extends BaseFragment {
             if (null == serviceModelList)
                 return 0;
             return serviceModelList.size();
+        }
+
+        private class onClick implements View.OnClickListener {
+            String url;
+
+            public onClick(String url) {
+                this.url = url;
+            }
+
+            @Override
+            public void onClick(View v) {
+                common.replaceFragment((MainActivity) getActivity(), ServiceDetail.newInstantiate(url), R.id.content);
+            }
         }
     }
 }
