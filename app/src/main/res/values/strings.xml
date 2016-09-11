@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">FPI</string>
-
+    <string name="google_maps_key">AIzaSyCvp4bonuLppYyT-j2Us7JbtQ4STF7siHU</string>
     <string name="menu_home">Home</string>
     <string name="menu_service">Services</string>
     <string name="menu_service_detail">Services detail</string>
