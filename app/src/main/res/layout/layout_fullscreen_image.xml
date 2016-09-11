@@ -7,8 +7,7 @@
     <com.nankai.fpicomsg.customview.TouchImageView
         android:id="@+id/imgDisplay"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="fitCenter" />
+        android:layout_height="fill_parent" />
 
     <Button
         android:id="@+id/btnClose"
@@ -23,5 +22,12 @@
         android:paddingTop="2dp"
         android:text="Close"
         android:textColor="#ffffff" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>

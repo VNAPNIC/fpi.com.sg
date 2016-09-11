@@ -186,7 +186,7 @@ public class GalleryFragment extends BaseFragment {
         public void onBindViewHolder(GalleryViewHolder holder, int position) {
             if (datums != null && datums.size() > 0) {
                 Datum item = datums.get(position);
-                Picasso.with(context).load(item.featureImage).error(R.mipmap.ic_launcher).noFade().placeholder(R.mipmap.ic_launcher)
+                Picasso.with(context).load(item.featureImage).error(android.R.drawable.stat_notify_error).noFade().placeholder(R.drawable.images)
                         .into(holder.imgNetWorkView);
                 holder.termName.setText(item.termName);
                 holder.viewItem.setOnClickListener(new OnClick(item.postId + ""));

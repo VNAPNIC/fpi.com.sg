@@ -5,17 +5,22 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.nankai.fpicomsg.MainActivity;
 import com.nankai.fpicomsg.R;
 import com.nankai.fpicomsg.customview.TouchImageView;
 import com.squareup.picasso.Callback;
@@ -27,13 +32,16 @@ import com.squareup.picasso.Transformation;
  */
 public class FullScreenImageAdapter extends PagerAdapter {
 
+    private Handler handler;
     private Activity activity;
     private List<String> imagePaths;
     private LayoutInflater inflater;
+    private ProgressBar progressBar;
 
     public FullScreenImageAdapter(Activity activity) {
         imagePaths = new ArrayList<>();
         this.activity = activity;
+        handler = new Handler();
     }
 
     @Override
@@ -51,13 +59,14 @@ public class FullScreenImageAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         if (null != imagePaths && imagePaths.size() > 0) {
+            handler.removeCallbacks(null);
             final TouchImageView imgDisplay;
             Button btnClose;
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View viewLayout = inflater.inflate(R.layout.layout_fullscreen_image, container,
                     false);
-
+            progressBar = (ProgressBar) viewLayout.findViewById(R.id.progress);
             imgDisplay = (TouchImageView) viewLayout.findViewById(R.id.imgDisplay);
             btnClose = (Button) viewLayout.findViewById(R.id.btnClose);
 
@@ -82,22 +91,41 @@ public class FullScreenImageAdapter extends PagerAdapter {
                 }
             };
 
-            Picasso.with(activity)
-                    .load(imagePaths.get(position))
-                    .error(android.R.drawable.stat_notify_error)
-                    .transform(transformation)
-                    .into(imgDisplay, new Callback() {
-                        @Override
-                        public void onSuccess() {
-                            //TODO progress
-                        }
+            if (position == 0) {
+                progressBar.setVisibility(View.GONE);
+                Picasso.with(activity)
+                        .load(imagePaths.get(position))
+                        .error(android.R.drawable.stat_notify_error)
+                        .placeholder(R.drawable.progress_animation)
+                        .transform(transformation)
+                        .into(imgDisplay);
+            } else {
+                progressBar.setVisibility(View.VISIBLE);
+                Picasso.with(activity)
+                        .load(imagePaths.get(position))
+                        .fit()
+                        .centerCrop()
+                        .error(android.R.drawable.stat_notify_error)
+                        .transform(transformation)
+                        .into(imgDisplay
+                                , new Callback() {
+                            @Override
+                            public void onSuccess() {
+                                //TODO progress
+                                Log.d("Nankai", "onSuccess");
+                                progressBar.setVisibility(View.GONE);
+                            }
 
-                        @Override
-                        public void onError() {
-                           //TODO progress
-                        }
-                    });
+                            @Override
+                            public void onError() {
+                                //TODO progress
+                                Log.d("Nankai", "onError");
+                                progressBar.setVisibility(View.GONE);
+                            }
 
+
+                        });
+            }
             // close button click event
             btnClose.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -108,8 +108,8 @@ public class GalleryDetailActivity extends AppCompatActivity {
                             GralleryDetail gralleryDetail = gson.fromJson(response.toString(), GralleryDetail.class);
                             Log.d("Nankai", "gallery.data: " + gralleryDetail.data.src.size());
                             adapter.setImagePaths(gralleryDetail.data.src);
-                            if (gralleryDetail.data.src.size() > 0)
-                                viewPager.setCurrentItem(0);
+//                            if (gralleryDetail.data.src.size() > 0)
+//                                viewPager.setCurrentItem(0);
                         }
                     },
                     new Response.ErrorListener() {
