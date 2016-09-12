@@ -1,6 +1,7 @@
 package com.nankai.fpi;
 
 import android.app.Application;
+import android.support.multidex.MultiDex;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -25,6 +26,7 @@ public class AppController extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MultiDex.install(this);
         mInstance = this;
     }
 
