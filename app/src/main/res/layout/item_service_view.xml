@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_1_8dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/service_item_view"
+    android:padding="@dimen/spacing_1_8dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/banner_service"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.nankai.fpicomsg.customview.FontTextView
+            android:id="@+id/title_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner_service"
+            android:layout_marginTop="@dimen/spacing_1_8dp"
+            android:textColor="@color/colorPrimary" />
+
+        <com.nankai.fpicomsg.customview.FontTextView
+            android:id="@+id/content_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_service"
+            android:layout_marginTop="@dimen/spacing_0_4dp"
+            android:textColor="@color/textColor" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

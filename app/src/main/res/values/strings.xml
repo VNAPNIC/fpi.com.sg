@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">FPI</string>
+    <string name="google_maps_key">AIzaSyCvp4bonuLppYyT-j2Us7JbtQ4STF7siHU</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_service">Services</string>
+    <string name="menu_service_detail">Services detail</string>
+    <string name="about">About us</string>
+    <string name="contact">Contacts us</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_more">More</string>
+    <string name="home_title">Welcome To Federal Proteccio’n Investigacio’n Pte. Ltd</string>
+    <string name="home_tile_2">Protect your Business with Federal Proteccio’n Investigacio’n Pte. Ltd’s Security &amp; Investigation Services</string>
+    <string name="home_content">Having a massive experience in offering the best security and investigation services across Singapore and beyond, Federal Proteccio’n Investigacio’n Pte. Ltd has provided reliable, professional and scalable solutions to fit and fulfil your company’s national and international security requirements effectively. Our security and investigation professionals are fully-committed to maintaining and enhancing the uprightness of the industry, quality of service and the public insight.\n\n
+
+Federal Proteccio’n Investigacio’n Pte. Ltd is one of the most pioneering and established Security and Investigation Company in Singapore. We are supported and licensed by the Police Licensing and Regulatory Department of Singapore and are authorized and accredited members of the Security Association of Singapore (SAS) and the professional body Association of Certified Security Agency (ACSA).\n\n
+
+Since our inception we have been offering the most reliable, scalable and professional Security and investigation services to a wide spectrum of industries. We strive for fineness in the security and Investigation niche and to become a top-notch security and investigation service providers in Singapore and beyond.\n\n
+
+Federal Proteccio’n Investigacio’n Pte. Ltd have Federal command centre in operation 24 x7, 365 days a year. Our members constantly keep an eye on attendance &amp; performance of all our assignments 24 hours round the clock.</string>
+
+    <string name="contact_title_1">Federal Proteccio’n Investigacio’n Pte. Ltd</string>
+    <string name="contact_title_2">No 1 Yishun Industrial Street 1,\n
+                                #04-02, A’posh Bizhub,\n
+                                Singapore 768 160\n
+                                Tel: +65 6339 7712\n
+                                Fax: +65 6339 7713</string>
+    <string name="home_exp">Experience</string>
+    <string name="home_exp_1">On Site / Physical Security Service</string>
+    <string name="home_exp_2">Security Management Service</string>
+    <string name="home_exp_3">Security Equipment Service</string>
+    <string name="home_exp_4">Mobil Surveillance Service</string>
+    <string name="home_exp_5">Security Consultant</string>
+    <string name="home_exp_6">Private Investigation</string>
+    <string name="key_map">AIzaSyBr3GFHScjTYiN43ir9ECOodXTL2fCtBTE</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
