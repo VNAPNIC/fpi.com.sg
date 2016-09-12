@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.nankai.fpicomsg.customview.FontTextView
+    <com.nankai.fpi.customview.FontTextView
         android:id="@+id/about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         android:textSize="@dimen/text_5_20sp"
         android:textStyle="bold" />
 
-    <com.nankai.fpicomsg.customview.FontTextView
+    <com.nankai.fpi.customview.FontTextView
         android:id="@+id/contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

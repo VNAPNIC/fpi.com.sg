@@ -10,7 +10,7 @@
         android:layout_height="@dimen/menu_icon_height"
         android:layout_alignParentTop="true" />
 
-    <com.nankai.fpicomsg.customview.FontTextView
+    <com.nankai.fpi.customview.FontTextView
         android:id="@+id/title_menu"
         android:layout_centerHorizontal="true"
         android:gravity="center"

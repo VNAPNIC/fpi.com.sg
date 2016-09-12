@@ -64,7 +64,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin">
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -75,7 +75,7 @@
                 android:textSize="@dimen/text_4_medium_16sp"
                 android:textStyle="bold" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -84,7 +84,7 @@
                 android:textSize="@dimen/text_2_12sp"
                 android:textStyle="bold" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -92,7 +92,7 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -103,7 +103,7 @@
                 android:textSize="@dimen/text_4_medium_16sp"
                 android:textStyle="bold" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -122,7 +122,7 @@
                 android:indeterminateTintMode="screen"
                 android:progress="90" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -139,7 +139,7 @@
                 android:indeterminateOnly="false"
                 android:progress="85" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -156,7 +156,7 @@
                 android:indeterminateOnly="false"
                 android:progress="80" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -173,7 +173,7 @@
                 android:indeterminateOnly="false"
                 android:progress="80" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
@@ -188,7 +188,7 @@
                 android:layout_marginRight="@dimen/spacing_2_16dp"
                 android:progress="50" />
 
-            <com.nankai.fpicomsg.customview.FontTextView
+            <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_1_8dp"
