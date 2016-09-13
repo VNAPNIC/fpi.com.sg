@@ -2,13 +2,17 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background">
         <shape>
-            <corners android:radius="50dip" />
-            <solid android:color="@color/white"/>
-            <padding android:bottom="3dip" android:left="3dip" android:right="3dip" android:top="3dip" />
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="1px"
+                android:color="@color/secondary_text_hint"></stroke>
         </shape>
     </item>
 
     <item android:id="@android:id/progress">
-        <bitmap android:src="@drawable/progressbar" android:gravity="center" android:tileMode="disabled"/>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/progress"
+            android:tileMode="disabled" />
     </item>
 </layer-list>

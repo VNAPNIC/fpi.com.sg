@@ -7,7 +7,9 @@
     <color name="textColor">#dd000000</color>
     <color name="black">#000000</color>
     <color name="textColorSecondary">#89000000</color>
-    <color name="secondary_text_hint">#80ffffff</color>
+    <color name="secondary_text_hint">#ff808080</color>
     <color name="menu">#e9ebee</color>
     <color name="focused_text_color">#ff6600</color>
+
+    <color name="progress">#0080ff</color>
 </resources>

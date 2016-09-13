@@ -47,7 +47,6 @@ public class GalleryFragment extends BaseFragment {
     public static final String KEY_TIME = "time";
     public static final String KEY_ACCESS_KEY = "access_key";
     private String tag_json_obj = GalleryFragment.class.getName();
-    private Gallery gallery = new Gallery();
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private GalleryAdapter galleryAdapter;
@@ -96,6 +95,7 @@ public class GalleryFragment extends BaseFragment {
                         public void onResponse(String response) {
                             Log.d("Response", response.toString());
                             try {
+                                Gallery gallery = new Gallery();
                                 JSONObject jsonObj = new JSONObject(response.toString());
                                 gallery.message = jsonObj.getString("message");
                                 gallery.status = jsonObj.getBoolean("status");

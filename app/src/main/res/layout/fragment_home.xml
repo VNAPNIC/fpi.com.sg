@@ -111,16 +111,19 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <ProgressBar
+            <com.nankai.fpi.customview.TextProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_2_16dp"
                 android:layout_marginRight="@dimen/spacing_2_16dp"
+                android:indeterminate="false"
                 android:indeterminateBehavior="cycle"
                 android:indeterminateDuration="1"
                 android:indeterminateOnly="false"
                 android:indeterminateTintMode="screen"
-                android:progress="90" />
+                android:nestedScrollingEnabled="false"
+                android:progress="90"
+                android:progressDrawable="@drawable/rounded_shape" />
 
             <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
@@ -130,14 +133,15 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <ProgressBar
+            <com.nankai.fpi.customview.TextProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_2_16dp"
                 android:layout_marginRight="@dimen/spacing_2_16dp"
                 android:indeterminateBehavior="cycle"
                 android:indeterminateOnly="false"
-                android:progress="85" />
+                android:progress="85"
+                android:progressDrawable="@drawable/rounded_shape" />
 
             <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
@@ -147,14 +151,15 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <ProgressBar
+            <com.nankai.fpi.customview.TextProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_2_16dp"
                 android:layout_marginRight="@dimen/spacing_2_16dp"
                 android:indeterminateBehavior="cycle"
                 android:indeterminateOnly="false"
-                android:progress="80" />
+                android:progress="70"
+                android:progressDrawable="@drawable/rounded_shape" />
 
             <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
@@ -164,14 +169,15 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <ProgressBar
+            <com.nankai.fpi.customview.TextProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_2_16dp"
                 android:layout_marginRight="@dimen/spacing_2_16dp"
                 android:indeterminateBehavior="cycle"
                 android:indeterminateOnly="false"
-                android:progress="80" />
+                android:progress="70"
+                android:progressDrawable="@drawable/rounded_shape" />
 
             <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
@@ -181,12 +187,13 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <ProgressBar
+            <com.nankai.fpi.customview.TextProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_2_16dp"
                 android:layout_marginRight="@dimen/spacing_2_16dp"
-                android:progress="50" />
+                android:progress="50"
+                android:progressDrawable="@drawable/rounded_shape" />
 
             <com.nankai.fpi.customview.FontTextView
                 android:layout_width="match_parent"
@@ -196,7 +203,7 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_2_12sp" />
 
-            <ProgressBar
+            <com.nankai.fpi.customview.TextProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_2_16dp"
@@ -204,7 +211,8 @@
                 android:layout_marginRight="@dimen/spacing_2_16dp"
                 android:indeterminateBehavior="cycle"
                 android:indeterminateOnly="false"
-                android:progress="70" />
+                android:progress="60"
+                android:progressDrawable="@drawable/rounded_shape" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
